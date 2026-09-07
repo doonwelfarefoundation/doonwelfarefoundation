@@ -83,7 +83,10 @@ needed.
 4. **Deploy.** After adding a custom domain, update `NEXT_PUBLIC_SITE_URL` to match
    and redeploy so the SEO URLs are correct.
 
-Node version is pinned to 22 via `.nvmrc` (Next 16 requires Node ≥ 20.9).
+Node version is pinned to **24** — via `engines.node` (`24.x`) in `package.json`,
+plus `.nvmrc` and `.node-version` for local tooling. Next 16 supports Node ≥ 20.9,
+so this project targets and is verified on **Node 24**. Set the same version in
+Vercel → Project → Settings → Node.js Version if you prefer to pin it there too.
 
 ## Project structure
 
