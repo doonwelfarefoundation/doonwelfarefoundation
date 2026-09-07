@@ -17,12 +17,7 @@ export default function Hero() {
 
       <div className="relative mx-auto grid max-w-6xl items-center gap-10 px-5 pb-24 pt-32 md:grid-cols-2 md:pb-32 md:pt-40">
         <div className="animate-fade-up">
-          <span className="inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/10 px-4 py-1.5 text-xs font-medium text-white/90 backdrop-blur">
-            <span className="h-2 w-2 rounded-full bg-brand-gold" />
-            {t.hero.badge}
-          </span>
-
-          <h1 className="mt-6 font-display text-4xl font-extrabold leading-tight text-white sm:text-5xl lg:text-6xl">
+          <h1 className="font-display text-4xl font-extrabold leading-tight text-white sm:text-5xl lg:text-6xl">
             {t.hero.titleBefore}
             <span className="bg-gradient-to-r from-brand-gold-light to-brand-gold bg-clip-text text-transparent">
               {t.hero.titleHighlight}

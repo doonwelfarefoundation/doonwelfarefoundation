@@ -1,7 +1,7 @@
 # Doon Welfare Foundation
 
 A SEO-friendly website for the **Doon Welfare Foundation**, a non-profit based in
-Barotiwala, Himachal Pradesh. Built with **Next.js 15 (App Router) + TypeScript**
+Barotiwala, Himachal Pradesh. Built with **Next.js 16 (App Router) + TypeScript**
 and **Tailwind CSS v4**, using the foundation's brand colours (deep green
 `#1F5F43` and gold `#E0912B`) with a gradient design.
 
@@ -44,10 +44,15 @@ Get Involved · Contact (details, map, WhatsApp form) · Footer.
 
 ## Contact details
 
-- **Phone / WhatsApp:** 9716186777
-- **Email:** doonwelfarefoundation@gmail.com
+- **Phone:** 9716186777 &nbsp;·&nbsp; `tel:+919716186777`
+- **WhatsApp:** [wa.me/919716186777](https://wa.me/919716186777)
+- **Email:** [doonwelfarefoundation@gmail.com](mailto:doonwelfarefoundation@gmail.com)
 - **Address:** House Number 192, Village Johranpur, PO Barotiwala,
-  Barotiwala, Himachal Pradesh — 174103 (Landmark: IJ Industries)
+  Barotiwala, Himachal Pradesh — 174103
+- **Landmark:** IJ Industries
+
+_These values are defined once in `src/data.ts` (`org`) and flow to the header,
+contact section, footer, WhatsApp links and SEO metadata — edit them there._
 
 ## Getting started
 
@@ -78,7 +83,7 @@ needed.
 4. **Deploy.** After adding a custom domain, update `NEXT_PUBLIC_SITE_URL` to match
    and redeploy so the SEO URLs are correct.
 
-Node version is pinned to 22 via `.nvmrc` (any Node ≥ 18.18 works).
+Node version is pinned to 22 via `.nvmrc` (Next 16 requires Node ≥ 20.9).
 
 ## Project structure
 
@@ -124,6 +129,5 @@ extend the `isLang` check in `LanguageProvider.tsx` and the no-flash script in
 
 ## Notes
 
-- `npm audit` reports advisories in a build-time-only `postcss` version pulled in
-  transitively by Next.js 15; the upstream fix requires Next 16 (a breaking
-  change) and does not affect the deployed site.
+- Running the latest **Next.js 16** with **React 19**; `npm audit` reports
+  **0 vulnerabilities**. Builds use Turbopack (the Next 16 default).
