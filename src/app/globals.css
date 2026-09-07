@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+/* class-based dark mode (toggled by adding `.dark` on <html>) */
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-brand-green: #1f5f43;
+  --color-brand-green-dark: #164632;
+  --color-brand-green-light: #2f8a63;
+  --color-brand-gold: #e0912b;
+  --color-brand-gold-light: #f0b458;
+  --color-brand-cream: #f8f6f0;
+
+  /* semantic tokens — overridden for dark mode below */
+  --color-surface: #f8f6f0;
+  --color-card: #ffffff;
+  --color-ink: #164632;
+  --color-body: #475569;
+  --color-muted: #64748b;
+  --color-line: rgba(31, 95, 67, 0.12);
+
+  --font-display: var(--font-poppins), ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+}
+
+/* dark theme token overrides — utilities read these vars, so they update automatically */
+.dark {
+  --color-surface: #0e1512;
+  --color-card: #16211b;
+  --color-ink: #eef3f0;
+  --color-body: #b6c3bb;
+  --color-muted: #8a998f;
+  --color-line: rgba(255, 255, 255, 0.1);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    margin: 0;
+    font-family: var(--font-sans);
+    color: var(--color-body);
+    background-color: var(--color-surface);
+    -webkit-font-smoothing: antialiased;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+  }
+}
+
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-14px); }
+}
+.animate-float-slow { animation: float-slow 6s ease-in-out infinite; }
+
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-up { animation: fade-up 0.7s ease both; }
