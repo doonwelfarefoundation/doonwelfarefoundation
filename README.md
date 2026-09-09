@@ -37,16 +37,50 @@ Six focus areas:
 5. 🐾 **Animal Welfare** — food, shelter, treatment and rescue for stray animals
 6. ❤️ **General Welfare & Relief** — support in difficult times
 
-## Sections
+## Pages (routes)
 
-Hero · About (mission, vision, stats) · What We Do (six focus areas) ·
-Get Involved · Contact (details, map, WhatsApp form) · Footer.
+| Route | Page |
+|-------|------|
+| `/` | Home — hero, about, focus areas, campaigns preview, get-involved |
+| `/about` | Mission, vision, stats, team |
+| `/what-we-do` | All six focus areas |
+| `/what-we-do/[cause]` | Detail page per cause (education, marriage, environment, water, animal, relief) |
+| `/campaigns` | Fundraising drives with progress bars |
+| `/events` | Upcoming & past events |
+| `/gallery` | Photo grid (placeholder tiles until real photos are added) |
+| `/blog` and `/blog/[slug]` | Blog list + individual posts |
+| `/donate` | UPI + QR + bank-transfer details, WhatsApp receipt CTA |
+| `/contact` | Contact details, map, WhatsApp form |
+
+The nav, footer, WhatsApp button, language switcher and theme toggle are shared
+across every page (in `src/app/layout.tsx`). Every page has its own SEO metadata
+and canonical URL, and all routes are in `sitemap.xml`.
+
+## ⚠️ Placeholder content to replace
+
+Editable long-form content lives in **`src/content.ts`** (English). Replace these
+with the foundation's real information:
+
+- **`donation`** — bank account number, IFSC, bank name, and the real **UPI ID**
+  (the donate-page QR is generated from it).
+- **`team`** — founder/team names and roles.
+- **`campaigns`**, **`events`**, **`posts`** — sample entries; edit or replace.
+  Campaign cards use AI-generated images at `public/campaigns/<slug>.jpg`
+  (prompts in `campaignImagePrompts`); replace with real photos using the same
+  filename.
+- **`gallery`** — uses **AI-generated placeholder photos** in `public/gallery/`
+  (`gallery-1.jpg` … `gallery-8.jpg`). Swap these files for real photos of your
+  work (same filenames). To regenerate an AI image, use the `galleryImageUrl(prompt, seed)`
+  helper / the prompts in `src/content.ts`.
+
+UI text (menus, headings, buttons) is translated in `src/i18n/translations.ts`.
 
 ## Contact details
 
-- **Phone:** 9716186777 &nbsp;·&nbsp; `tel:+919716186777`
-- **WhatsApp:** [wa.me/919716186777](https://wa.me/919716186777)
+- **Phone:** 9816186777 &nbsp;·&nbsp; `tel:+919816186777`
+- **WhatsApp:** [wa.me/919816186777](https://wa.me/919816186777)
 - **Email:** [doonwelfarefoundation@gmail.com](mailto:doonwelfarefoundation@gmail.com)
+- **Instagram:** [@doonwelfarefoundation](https://www.instagram.com/doonwelfarefoundation) &nbsp;·&nbsp; **Facebook:** [profile](https://www.facebook.com/share/18jo7nGME7/)
 - **Address:** House Number 192, Village Johranpur, PO Barotiwala,
   Barotiwala, Himachal Pradesh — 174103
 - **Landmark:** IJ Industries

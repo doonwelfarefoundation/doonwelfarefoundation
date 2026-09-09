@@ -66,19 +66,9 @@ export default function Contact() {
   }
 
   return (
-    <section id="contact" className="relative py-20 md:py-28">
+    <section id="contact" className="relative py-16 md:py-20">
       <div className="mx-auto max-w-6xl px-5">
-        <div className="mx-auto max-w-2xl text-center">
-          <p className="font-display text-sm font-semibold uppercase tracking-widest text-brand-gold">
-            {t.contact.eyebrow}
-          </p>
-          <h2 className="mt-3 font-display text-3xl font-bold text-ink sm:text-4xl">
-            {t.contact.heading}
-          </h2>
-          <p className="mt-4 text-lg text-body">{t.contact.subtitle}</p>
-        </div>
-
-        <div className="mt-14 grid gap-8 lg:grid-cols-2">
+        <div className="grid gap-8 lg:grid-cols-2">
           {/* details + map */}
           <div className="space-y-4">
             <ContactCard

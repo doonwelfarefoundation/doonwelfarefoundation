@@ -10,11 +10,86 @@ export const langNames: Record<Lang, string> = {
 
 const en = {
   nav: {
+    home: 'Home',
     about: 'About',
     whatWeDo: 'What We Do',
+    campaigns: 'Campaigns',
+    events: 'Events',
+    gallery: 'Gallery',
+    blog: 'Blog',
     getInvolved: 'Get Involved',
     contact: 'Contact',
     donate: 'Donate',
+  },
+  common: {
+    readMore: 'Read more',
+    viewAll: 'View all',
+    donateNow: 'Donate Now',
+    learnMore: 'Learn more',
+    backHome: 'Back to home',
+    upcoming: 'Upcoming',
+    past: 'Past',
+    raised: 'raised',
+    goalLabel: 'Goal',
+    support: 'Support this cause',
+    ourWork: 'Our work',
+    howWeHelp: 'How we help',
+    team: 'Our Team',
+    noResults: 'Nothing here yet — check back soon.',
+  },
+  pages: {
+    about: {
+      title: 'About Us',
+      subtitle: 'Who we are and the belief that drives our work.',
+    },
+    whatWeDo: {
+      title: 'What We Do',
+      subtitle: 'Six areas where we turn compassion into action.',
+    },
+    campaigns: {
+      title: 'Campaigns',
+      subtitle: 'Focused drives you can rally behind and support.',
+    },
+    events: {
+      title: 'Events',
+      subtitle: 'Camps, drives and gatherings across our community.',
+    },
+    gallery: {
+      title: 'Gallery',
+      subtitle: 'Moments from our work on the ground.',
+    },
+    blog: {
+      title: 'Blog & Stories',
+      subtitle: 'Updates, stories and news from the foundation.',
+    },
+    donate: {
+      title: 'Donate',
+      subtitle: 'Your generosity turns directly into help.',
+    },
+    contact: {
+      title: 'Contact Us',
+      subtitle: 'We’d love to hear from you.',
+    },
+  },
+  donate: {
+    heading: 'Ways to give',
+    intro:
+      'Every contribution — big or small — funds real help for people, animals and the environment. Give securely via UPI or a direct bank transfer.',
+    upiTitle: 'Pay via UPI',
+    upiId: 'UPI ID',
+    scanQr: 'Scan the QR code with any UPI app',
+    bankTitle: 'Bank transfer',
+    accountName: 'Account Name',
+    accountNumber: 'Account Number',
+    ifsc: 'IFSC Code',
+    bankName: 'Bank',
+    branch: 'Branch',
+    afterNote:
+      'After donating, please share the receipt on WhatsApp so we can thank you and issue a confirmation.',
+    whatsappCta: 'Send receipt on WhatsApp',
+    comingSoon: 'Bank & UPI details will be updated soon',
+    comingSoonNote:
+      'Our bank and UPI details will be updated here soon. In the meantime, please reach out on WhatsApp to donate — thank you for your patience.',
   },
   hero: {
     badge: 'Serving Barotiwala, Himachal Pradesh',
@@ -120,6 +195,7 @@ const en = {
   footer: {
     explore: 'Explore',
     reachUs: 'Reach Us',
+    followUs: 'Follow Us',
     madeWith: 'Made with care for our community.',
   },
   a11y: {
@@ -133,11 +209,86 @@ export type Dict = typeof en
 
 const hi: Dict = {
   nav: {
+    home: 'होम',
     about: 'हमारे बारे में',
     whatWeDo: 'हम क्या करते हैं',
+    campaigns: 'अभियान',
+    events: 'कार्यक्रम',
+    gallery: 'गैलरी',
+    blog: 'ब्लॉग',
     getInvolved: 'साथ जुड़ें',
     contact: 'संपर्क करें',
     donate: 'दान करें',
+  },
+  common: {
+    readMore: 'और पढ़ें',
+    viewAll: 'सभी देखें',
+    donateNow: 'अभी दान करें',
+    learnMore: 'और जानें',
+    backHome: 'होम पर वापस',
+    upcoming: 'आगामी',
+    past: 'पिछले',
+    raised: 'जुटाए गए',
+    goalLabel: 'लक्ष्य',
+    support: 'इस कार्य का साथ दें',
+    ourWork: 'हमारा काम',
+    howWeHelp: 'हम कैसे मदद करते हैं',
+    team: 'हमारी टीम',
+    noResults: 'यहाँ अभी कुछ नहीं — जल्द ही देखें।',
+  },
+  pages: {
+    about: {
+      title: 'हमारे बारे में',
+      subtitle: 'हम कौन हैं और कौन-सी सोच हमारे काम को दिशा देती है।',
+    },
+    whatWeDo: {
+      title: 'हम क्या करते हैं',
+      subtitle: 'छह क्षेत्र जहाँ हम करुणा को कर्म में बदलते हैं।',
+    },
+    campaigns: {
+      title: 'अभियान',
+      subtitle: 'ऐसे केंद्रित अभियान जिनका आप साथ दे सकते हैं।',
+    },
+    events: {
+      title: 'कार्यक्रम',
+      subtitle: 'हमारे समुदाय में शिविर, अभियान और आयोजन।',
+    },
+    gallery: {
+      title: 'गैलरी',
+      subtitle: 'ज़मीनी कामों के कुछ पल।',
+    },
+    blog: {
+      title: 'ब्लॉग और कहानियाँ',
+      subtitle: 'फाउंडेशन से अपडेट, कहानियाँ और ख़बरें।',
+    },
+    donate: {
+      title: 'दान करें',
+      subtitle: 'आपकी उदारता सीधे मदद में बदलती है।',
+    },
+    contact: {
+      title: 'संपर्क करें',
+      subtitle: 'हम आपसे सुनना चाहेंगे।',
+    },
+  },
+  donate: {
+    heading: 'दान करने के तरीके',
+    intro:
+      'हर योगदान — छोटा हो या बड़ा — लोगों, पशुओं और पर्यावरण के लिए असली मदद बनता है। UPI या सीधे बैंक ट्रांसफर से सुरक्षित रूप से दान करें।',
+    upiTitle: 'UPI से भुगतान',
+    upiId: 'UPI आईडी',
+    scanQr: 'किसी भी UPI ऐप से QR कोड स्कैन करें',
+    bankTitle: 'बैंक ट्रांसफर',
+    accountName: 'खाता नाम',
+    accountNumber: 'खाता संख्या',
+    ifsc: 'IFSC कोड',
+    bankName: 'बैंक',
+    branch: 'शाखा',
+    afterNote:
+      'दान के बाद कृपया रसीद व्हाट्सएप पर भेजें ताकि हम आपका धन्यवाद कर सकें और पुष्टि जारी कर सकें।',
+    whatsappCta: 'व्हाट्सएप पर रसीद भेजें',
+    comingSoon: 'बैंक और UPI विवरण जल्द ही अपडेट किए जाएंगे',
+    comingSoonNote:
+      'हमारे बैंक और UPI विवरण जल्द ही यहाँ अपडेट किए जाएंगे। तब तक, दान के लिए कृपया व्हाट्सएप पर संपर्क करें — आपके धैर्य के लिए धन्यवाद।',
   },
   hero: {
     badge: 'बरोटीवाला, हिमाचल प्रदेश की सेवा में',
@@ -243,6 +394,7 @@ const hi: Dict = {
   footer: {
     explore: 'एक्सप्लोर',
     reachUs: 'हम तक पहुँचें',
+    followUs: 'हमें फ़ॉलो करें',
     madeWith: 'प्रेम से हमारे समुदाय के लिए बनाया गया।',
   },
   a11y: {
@@ -254,11 +406,86 @@ const hi: Dict = {
 
 const pa: Dict = {
   nav: {
+    home: 'ਹੋਮ',
     about: 'ਸਾਡੇ ਬਾਰੇ',
     whatWeDo: 'ਅਸੀਂ ਕੀ ਕਰਦੇ ਹਾਂ',
+    campaigns: 'ਮੁਹਿੰਮਾਂ',
+    events: 'ਸਮਾਗਮ',
+    gallery: 'ਗੈਲਰੀ',
+    blog: 'ਬਲੌਗ',
     getInvolved: 'ਨਾਲ ਜੁੜੋ',
     contact: 'ਸੰਪਰਕ ਕਰੋ',
     donate: 'ਦਾਨ ਕਰੋ',
+  },
+  common: {
+    readMore: 'ਹੋਰ ਪੜ੍ਹੋ',
+    viewAll: 'ਸਭ ਵੇਖੋ',
+    donateNow: 'ਹੁਣੇ ਦਾਨ ਕਰੋ',
+    learnMore: 'ਹੋਰ ਜਾਣੋ',
+    backHome: 'ਹੋਮ ’ਤੇ ਵਾਪਸ',
+    upcoming: 'ਆਉਣ ਵਾਲੇ',
+    past: 'ਪਿਛਲੇ',
+    raised: 'ਇਕੱਠੇ ਕੀਤੇ',
+    goalLabel: 'ਟੀਚਾ',
+    support: 'ਇਸ ਕਾਰਜ ਦਾ ਸਾਥ ਦਿਓ',
+    ourWork: 'ਸਾਡਾ ਕੰਮ',
+    howWeHelp: 'ਅਸੀਂ ਕਿਵੇਂ ਮਦਦ ਕਰਦੇ ਹਾਂ',
+    team: 'ਸਾਡੀ ਟੀਮ',
+    noResults: 'ਇੱਥੇ ਹਾਲੇ ਕੁਝ ਨਹੀਂ — ਜਲਦੀ ਵੇਖੋ।',
+  },
+  pages: {
+    about: {
+      title: 'ਸਾਡੇ ਬਾਰੇ',
+      subtitle: 'ਅਸੀਂ ਕੌਣ ਹਾਂ ਅਤੇ ਕਿਹੜੀ ਸੋਚ ਸਾਡੇ ਕੰਮ ਨੂੰ ਸੇਧ ਦਿੰਦੀ ਹੈ।',
+    },
+    whatWeDo: {
+      title: 'ਅਸੀਂ ਕੀ ਕਰਦੇ ਹਾਂ',
+      subtitle: 'ਛੇ ਖੇਤਰ ਜਿੱਥੇ ਅਸੀਂ ਦਇਆ ਨੂੰ ਅਮਲ ਵਿੱਚ ਬਦਲਦੇ ਹਾਂ।',
+    },
+    campaigns: {
+      title: 'ਮੁਹਿੰਮਾਂ',
+      subtitle: 'ਅਜਿਹੀਆਂ ਕੇਂਦਰਿਤ ਮੁਹਿੰਮਾਂ ਜਿਨ੍ਹਾਂ ਦਾ ਤੁਸੀਂ ਸਾਥ ਦੇ ਸਕਦੇ ਹੋ।',
+    },
+    events: {
+      title: 'ਸਮਾਗਮ',
+      subtitle: 'ਸਾਡੇ ਭਾਈਚਾਰੇ ਵਿੱਚ ਕੈਂਪ, ਮੁਹਿੰਮਾਂ ਅਤੇ ਇਕੱਠ।',
+    },
+    gallery: {
+      title: 'ਗੈਲਰੀ',
+      subtitle: 'ਜ਼ਮੀਨੀ ਕੰਮਾਂ ਦੀਆਂ ਕੁਝ ਝਲਕੀਆਂ।',
+    },
+    blog: {
+      title: 'ਬਲੌਗ ਤੇ ਕਹਾਣੀਆਂ',
+      subtitle: 'ਫਾਊਂਡੇਸ਼ਨ ਤੋਂ ਅੱਪਡੇਟ, ਕਹਾਣੀਆਂ ਅਤੇ ਖ਼ਬਰਾਂ।',
+    },
+    donate: {
+      title: 'ਦਾਨ ਕਰੋ',
+      subtitle: 'ਤੁਹਾਡੀ ਖੁੱਲ੍ਹਦਿਲੀ ਸਿੱਧੀ ਮਦਦ ਬਣ ਜਾਂਦੀ ਹੈ।',
+    },
+    contact: {
+      title: 'ਸੰਪਰਕ ਕਰੋ',
+      subtitle: 'ਅਸੀਂ ਤੁਹਾਡੇ ਤੋਂ ਸੁਣਨਾ ਚਾਹਾਂਗੇ।',
+    },
+  },
+  donate: {
+    heading: 'ਦਾਨ ਕਰਨ ਦੇ ਤਰੀਕੇ',
+    intro:
+      'ਹਰ ਯੋਗਦਾਨ — ਛੋਟਾ ਹੋਵੇ ਜਾਂ ਵੱਡਾ — ਲੋਕਾਂ, ਪਸ਼ੂਆਂ ਅਤੇ ਵਾਤਾਵਰਨ ਲਈ ਅਸਲ ਮਦਦ ਬਣਦਾ ਹੈ। UPI ਜਾਂ ਸਿੱਧੇ ਬੈਂਕ ਟ੍ਰਾਂਸਫਰ ਰਾਹੀਂ ਸੁਰੱਖਿਅਤ ਦਾਨ ਕਰੋ।',
+    upiTitle: 'UPI ਰਾਹੀਂ ਭੁਗਤਾਨ',
+    upiId: 'UPI ਆਈਡੀ',
+    scanQr: 'ਕਿਸੇ ਵੀ UPI ਐਪ ਨਾਲ QR ਕੋਡ ਸਕੈਨ ਕਰੋ',
+    bankTitle: 'ਬੈਂਕ ਟ੍ਰਾਂਸਫਰ',
+    accountName: 'ਖਾਤਾ ਨਾਮ',
+    accountNumber: 'ਖਾਤਾ ਨੰਬਰ',
+    ifsc: 'IFSC ਕੋਡ',
+    bankName: 'ਬੈਂਕ',
+    branch: 'ਸ਼ਾਖਾ',
+    afterNote:
+      'ਦਾਨ ਤੋਂ ਬਾਅਦ ਕਿਰਪਾ ਕਰਕੇ ਰਸੀਦ ਵਟਸਐਪ ’ਤੇ ਭੇਜੋ ਤਾਂ ਜੋ ਅਸੀਂ ਤੁਹਾਡਾ ਧੰਨਵਾਦ ਕਰ ਸਕੀਏ ਅਤੇ ਪੁਸ਼ਟੀ ਦੇ ਸਕੀਏ।',
+    whatsappCta: 'ਵਟਸਐਪ ’ਤੇ ਰਸੀਦ ਭੇਜੋ',
+    comingSoon: 'ਬੈਂਕ ਅਤੇ UPI ਵੇਰਵੇ ਜਲਦੀ ਹੀ ਅੱਪਡੇਟ ਕੀਤੇ ਜਾਣਗੇ',
+    comingSoonNote:
+      'ਸਾਡੇ ਬੈਂਕ ਅਤੇ UPI ਵੇਰਵੇ ਜਲਦੀ ਹੀ ਇੱਥੇ ਅੱਪਡੇਟ ਕੀਤੇ ਜਾਣਗੇ। ਉਦੋਂ ਤੱਕ, ਦਾਨ ਲਈ ਕਿਰਪਾ ਕਰਕੇ ਵਟਸਐਪ ’ਤੇ ਸੰਪਰਕ ਕਰੋ — ਤੁਹਾਡੇ ਸਬਰ ਲਈ ਧੰਨਵਾਦ।',
   },
   hero: {
     badge: 'ਬਰੋਟੀਵਾਲਾ, ਹਿਮਾਚਲ ਪ੍ਰਦੇਸ਼ ਦੀ ਸੇਵਾ ਵਿੱਚ',
@@ -364,6 +591,7 @@ const pa: Dict = {
   footer: {
     explore: 'ਪੜਚੋਲ ਕਰੋ',
     reachUs: 'ਸਾਡੇ ਤੱਕ ਪਹੁੰਚੋ',
+    followUs: 'ਸਾਨੂੰ ਫਾਲੋ ਕਰੋ',
     madeWith: 'ਪਿਆਰ ਨਾਲ ਸਾਡੇ ਭਾਈਚਾਰੇ ਲਈ ਬਣਾਇਆ ਗਿਆ।',
   },
   a11y: {

@@ -3,6 +3,7 @@
 import Image from 'next/image'
 import { org } from '@/data'
 import { useLanguage } from '@/i18n/LanguageProvider'
+import SocialLinks from './SocialLinks'
 
 export default function Footer() {
   const { t } = useLanguage()
@@ -31,6 +32,10 @@ export default function Footer() {
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-white/70">
               {t.hero.intro.split('.')[0]}.
             </p>
+            <p className="mt-6 text-sm font-semibold text-white">
+              {t.footer.followUs}
+            </p>
+            <SocialLinks className="mt-3" />
           </div>
 
           <div>

@@ -8,15 +8,19 @@ export const org = {
     process.env.NEXT_PUBLIC_SITE_URL ?? 'https://doonwelfarefoundation.org'
   ).replace(/\/$/, ''),
   email: 'doonwelfarefoundation@gmail.com',
-  phone: '9716186777',
-  phoneHref: 'tel:+919716186777',
-  whatsapp: '919716186777',
+  phone: '9816186777',
+  phoneHref: 'tel:+919816186777',
+  whatsapp: '919816186777',
   address: {
     line1: 'House Number 192',
     line2: 'Village Johranpur, PO Barotiwala',
     landmark: 'Landmark: IJ Industries',
     cityState: 'Barotiwala, Himachal Pradesh',
     pin: '174103',
+  },
+  social: {
+    instagram: 'https://www.instagram.com/doonwelfarefoundation',
+    facebook: 'https://www.facebook.com/share/18jo7nGME7/',
   },
 } as const
 

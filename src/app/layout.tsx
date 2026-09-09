@@ -3,6 +3,9 @@ import { Inter, Poppins } from 'next/font/google'
 import { org } from '@/data'
 import { LanguageProvider } from '@/i18n/LanguageProvider'
 import { ThemeProvider } from '@/theme/ThemeProvider'
+import FloatingWhatsApp from '@/components/FloatingWhatsApp'
+import Footer from '@/components/Footer'
+import Navbar from '@/components/Navbar'
 import './globals.css'
 
 // Applied before paint to avoid a flash of the wrong theme / language.
@@ -96,6 +99,7 @@ const jsonLd = {
     addressCountry: 'IN',
   },
   areaServed: 'Barotiwala, Himachal Pradesh',
+  sameAs: [org.social.instagram, org.social.facebook],
 }
 
 export default function RootLayout({
@@ -118,7 +122,14 @@ export default function RootLayout({
       </head>
       <body>
         <ThemeProvider>
-          <LanguageProvider>{children}</LanguageProvider>
+          <LanguageProvider>
+            <div className="min-h-screen bg-surface">
+              <Navbar />
+              <main>{children}</main>
+              <Footer />
+            </div>
+            <FloatingWhatsApp />
+          </LanguageProvider>
         </ThemeProvider>
       </body>
     </html>
