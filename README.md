@@ -7,16 +7,24 @@ and **Tailwind CSS v4**, using the foundation's brand colours (deep green
 
 ## Features
 
+- **Installable PWA** — web app manifest (`src/app/manifest.ts`), icons in
+  `public/icons/`, and a service worker (`public/sw.js`, registered via
+  `ServiceWorkerRegister`) giving offline caching and add-to-home-screen. Theme
+  colours adapt to light/dark.
+- **Fully responsive** — mobile-first Tailwind layout; the nav collapses to a
+  hamburger menu below `lg`, grids reflow, and content is safe-area aware.
 - **Multilingual** — English (default), Hindi (हिन्दी) and Punjabi (ਪੰਜਾਬੀ),
   switchable from the navbar. The choice is saved to `localStorage` and applied
   to `<html lang>`; English is server-rendered for crawlers.
 - **Light & dark theme** — a navbar toggle switches themes; the choice is saved
   and, on first visit, follows the OS preference. An inline script applies the
   theme before paint so there is no flash.
-- **Server-rendered & SEO-friendly** — rich metadata (Open Graph, Twitter cards,
-  canonical URL, keywords), JSON-LD structured data (`NGO` schema),
-  auto-generated `sitemap.xml` and `robots.txt`, semantic HTML, and optimised
-  Google Fonts via `next/font`.
+- **Server-rendered & SEO-friendly** — every page is SSR/SSG with its own unique
+  `<title>`, description and canonical URL. Rich metadata (Open Graph + large
+  Twitter card), a **generated 1200×630 OG image** (`app/opengraph-image.tsx`),
+  JSON-LD structured data (`NGO` org, `BlogPosting` on posts, `Event` on events),
+  auto-generated `sitemap.xml` (all 17 URLs) and `robots.txt`, semantic headings,
+  and optimised Google Fonts via `next/font`.
 - **WhatsApp-integrated contact form** — the form composes the enquiry and opens
   a pre-filled WhatsApp chat to the foundation (with an email fallback).
 - **Floating WhatsApp button** — always-available quick chat.
